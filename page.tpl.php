@@ -5,20 +5,7 @@
         <a href="<?php print $front_page ?>" title="<?php print t('Home') ?>"><img src="<?php print($logo) ?>" alt="<?php print t('Home') ?>" border="0" /></a>
       <?php endif; ?>
      </div>
-     
-    <ul id="globalnav">
-     	<?php if ($logged_in) : ?>
-     	<li class="first"><?php print t("Hello ") ?> <strong><?php print theme('username', array('account'=>$user))?></strong></li>
-        		<li><a href="<?php print url('/user/logout')?>"><?php print t("Log out") ?></a></li>
-     	<?php else: ?>
-        <li class="noborder"><strong><a href="<?php print url('/user/register')?>"><?php print t("Join Now")?>!</a></strong></li>
-        <li><a href="<?php print url('/user/login')?>"><?php print t("Sign In")?></a></li>
-      <?php endif ?>
-    </ul>
-    
-</div>
-
-<div id="navibar">
+     <div id="navibar">
     <div id="navigation">
      <?php print theme('links__system_main_menu', array('links' => $main_menu));?>  
     </div>
@@ -30,22 +17,17 @@
     <?php endif; ?>
     
 </div>
+</div>
+
 <div class="Container">
 
 <div class="SL">
- 	<?php if ($page['sidebar_second']): ?>
-        <div id="sidebar-second" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_second']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
-    <?php endif; ?>
-</div><!--SR-->
-<div class="SR">
  	<?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
+        <div id="sidebar-second" class="column sidebar"><div class="section">
           <?php print render($page['sidebar_first']); ?>
         </div></div> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
-</div><!--SR-->
+</div><!--SL-->
 
 <div class="SCi">
  	<div id="main">
