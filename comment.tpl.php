@@ -3,7 +3,6 @@
 
   <div class="submitted">
     <?php print $submitted; ?>
-    <?php print render($content['plus1_widget'])?>
   </div>
   
 

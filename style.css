@@ -31,10 +31,12 @@ a:hover {
 /* header */
 #header{
 	 background:#5eaedb;
+	 min-height:90px;
 }
 #logo{
 	padding-top:15px;
 	padding-left:15px;
+	display: block;
 }
 
 /** Blocks **/
@@ -84,8 +86,49 @@ a:hover {
   text-decoration: none;
 }
 
-#navibar{
-	float:right;
+#header #navigation{
+display: block;
+float:right;
+padding-right:10px;
+}
+#header #navigation a:link{
+	color:#EEEEEE;
+	font-size: 1.4em;
+	font-family: "Arial";
+}
+
+/*block*/
+.SL .content {
+    border: 1px solid #DCDCDC;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    width: 230px;
+}
+.SL .content .head {
+    background: url("images/rightBG.png") repeat-x scroll 0 0 transparent;
+    background-color:#F3F3F3;
+    border-bottom: 1px solid #DBDBDB;
+}
+.SL .content .head h1 {
+    color: #333333;
+    font-size: 17px;
+    height: 21px;
+    letter-spacing: -1px;
+    margin: 0;
+    padding: 5px 0 5px 5px;
+}
+.SL .content .listsVisible {
+    float: left;
+    font-size: 12px;
+    padding-bottom: 0;
+    padding-top:5px;
+    width: 230px;
+    line-height: 16px;
+}
+.SL .content #user-login-form{
+	padding-left:10px;
 }
 
 /** Elements **/
@@ -151,7 +194,7 @@ div.panel-pane div.node {
 /* body */
 
 .SCi {
-    padding-left: 280px;
+    padding-left: 235px;
     
 }
 .SCi #main{
@@ -163,7 +206,43 @@ div.panel-pane div.node {
 .SL {
 	 position: relative;
     float: left;
-    width: 275px;
+    width: 230px;
+}
+.VoteHead{
+	border-bottom:1px dashed #DBDBDB;
+}
+.comment-form .form-type-item {
+    display: none;
+}
+.comment {
+    clear: left;
+    font-size: 13px;
+    margin: 15px auto 0;
+    padding: 5px 0 0;
+    position: relative;
+}
+.comment p {
+    margin: 0;
 }
 
-
+.ExtraBG {
+    border-top: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+    width: 100%;
+}
+.bottomMenu {
+    font-size: 12px;
+    height: 20px;
+    position: relative;
+    width: 900px;
+    padding-bottom:10px;
+}
+.bottomMenu li {
+    display: inline;
+    font-size: 14px;
+    font-family: "Tahona";
+    float: left;
+}
+.bottomMenu li a:link{
+    color:#4997da;
+}

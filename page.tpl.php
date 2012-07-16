@@ -5,18 +5,13 @@
         <a href="<?php print $front_page ?>" title="<?php print t('Home') ?>"><img src="<?php print($logo) ?>" alt="<?php print t('Home') ?>" border="0" /></a>
       <?php endif; ?>
      </div>
-     <div id="navibar">
-    <div id="navigation">
-     <?php print theme('links__system_main_menu', array('links' => $main_menu));?>  
-    </div>
+
+    <?php if ($main_menu): ?>
+<div id="navigation"><div class="section">
+<?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+</div></div> <!-- /.section, /#navigation -->
+<?php endif; ?> 
     
-    <?php if ($page['header']): ?>
-    <div id="header-block">
-          <?php print render($page['header']); ?>
-     </div>
-    <?php endif; ?>
-    
-</div>
 </div>
 
 <div class="Container">
