@@ -84,31 +84,8 @@ a:hover {
   text-decoration: none;
 }
 
-#navlist {
-  max-width: 1200px;
-  min-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-  vertical-align: top;
-  padding: 10px;
-  font-size: 1em;
-}
-
-#navlist li {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	display: inline-block;
-}
-
-#navlist li a {
-  padding: 10px;
-	margin: 0;
-}
-
-#navlist li:hover a, .primary-links a.active {
-  background: #fff;
-  color: #000;
+#navibar{
+	float:right;
 }
 
 /** Elements **/
