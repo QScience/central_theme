@@ -12,9 +12,8 @@
 </div></div> <!-- /.section, /#navigation -->
 <?php endif; ?> 
     
-</div>
+</div><!--header-->
 
-<div class="Container">
 
 <div class="SL">
  	<?php if ($page['sidebar_first']): ?>
@@ -39,13 +38,22 @@
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+        <?php if ($is_front||arg(0)=='sort'): ?>
+        <h1 class="title" id="page-title">Active Instances</h1>
+        <div class="list-title"><ul>
+<li class="list_title"> Title</li>
+<li class="list_uploadby">Uploaded By </li>
+<li class="list_downno">Download No</li>
+<li class="list_date">Publish Date</li>
+<li class="list_operations">Operations</li></ul>
+</div>
+        <?php endif;?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
 
     </div><!-- main -->
 </div><!--SCi-->
 
-</div>
 <div class="ExtraBG">
 <?php if ($page['footer']): ?>
  <div class="bottomMenu">

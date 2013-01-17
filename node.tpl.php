@@ -11,11 +11,10 @@
 <div class="PostHeadTitle <?php print('node-'.$node->type);?>"> 
 	<?php print render($title_prefix); ?>
     <h2 class="title"<?php print $title_attributes; ?>>
-    <?php if(isset($news_prefix)){ print '<span class="prefix">'.$news_prefix.'</span>: ';} print $title;?></h2>
+    <?php print $title;?></h2>
   <?php if ($display_submitted): ?>
     <div class="submitted">
-      <?php if(!isset($paper_authors)) print ('<p>'.$submitted.'</p>'); ?>
-      <?php if(isset($download))print('<p>'.$download.'</p>'); ?>
+      <?php  print ('<p>'.$submitted.'</p>'); ?>
     </div>
   <?php endif; ?>
     <?php print render($title_suffix); ?>
@@ -32,11 +31,23 @@
     ?>
   </div>
   <?php print render($content['comments']); ?>
-</div>
 <?php else:?>
-     <h2 <?php print $title_attributes; ?>>
-     <?php if(isset($news_prefix)) print '<span class="prefix">'.$news_prefix.'</span>: ';?>
+<div class="table-list"><ul>
+<li class="list_title">
      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
-
-     </h2>
+</li>
+<li class="list_uploadby">
+     <?php print $name; ?>
+</li>
+<li class="list_downno">
+     <?php print '0'; ?>
+</li>
+<li class="list_date">
+    <?php print date("m.d.y",$created); ?>
+</li>
+<li class="list_operations">
+     <a href="<?php print $node_url; ?>">download</a>
+</li></ul>
+</div>
   <?php endif?>
+</div>

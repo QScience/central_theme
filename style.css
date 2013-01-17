@@ -96,7 +96,9 @@ padding-right:10px;
 	font-size: 1.4em;
 	font-family: "Arial";
 }
-
+#header #navigation a.active{
+	color:#EEEEEE;
+}
 /*block*/
 .SL .content {
     border: 1px solid #DCDCDC;
@@ -163,8 +165,8 @@ color:#D30703;
 /** Drupal **/
 
 .node {
- /* border-bottom: 1px solid #ccc;*/
-	margin-top: 10px;
+ /* border-bottom: 1px solid #ccc;*
+	margin-top: 10px;*/
 }
 div.panel-pane div.node {
     margin-bottom: 10px;
@@ -245,4 +247,56 @@ div.panel-pane div.node {
 }
 .bottomMenu li a:link{
     color:#4997da;
+}
+.bottomMenu li a.active{
+    color:#4997da;
+    font-size:16px;
+}
+
+/* search form */
+
+#search-block-form{
+    margin: auto 5px;
+}
+#search-block-form .form-type-textfield input{
+    width:150px;
+}
+
+/*list*/
+.table-list ul,.list-title ul{
+	border-top-color:#E5E5E5;
+  border-top-style:solid;
+  border-top-width:1px;
+  list-style-type:none;
+  margin:0;
+}
+.table-list li{
+	display:inline-table;
+	position:relative;
+	margin:10px 0 10px 0;
+}
+li.list_operations{
+	width:10%;
+	  text-align: center;
+}
+li.list_date{
+	width:18%;
+	  text-align: center;
+}
+li.list_downno{
+	width:9%;
+	  text-align: center;
+}
+li.list_uploadby{
+	width:9%;
+	  text-align: center;
+}
+li.list_title{
+	width:50%;
+}
+.list-title{
+background-color:#F3F3F3;
+}
+.list-title li{
+	display:inline-table;
 }
